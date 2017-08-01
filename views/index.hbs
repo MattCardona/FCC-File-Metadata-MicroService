@@ -8,7 +8,17 @@
 </head>
 <body>
   <h2>File Metadata Microservice</h2>
-  <h3>Hello world</h3>
+  <div class="userStory">
+    <p>You are able to upload a file, submit it and get the size of your uploaded file in json format.</p>
+  </div>
+  <div class="ExampleOutput">
+  <h3>Example Output you will get back.</h3>
+    <p>
+      {
+        filesize: 1113460
+      }
+    </p>
+  </div>
 
   <form method="POST" enctype="multipart/form-data" action="/api">
     <input type="file" id="filepic" name="filepic"/>
