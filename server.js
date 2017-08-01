@@ -2,11 +2,11 @@ const express = require('express');
 const hbs = require('hbs');
 const multer = require('multer');
 //need to add a limit
-var upload = multer({dest: 'files/'})
+var upload = multer({dest: 'files/', limits: {fileSize: 2000000}});
 var app = express();
 var port = process.env.PORT || 3000;
 
-hbs.registerPartials(__dirname + '/views/partials')
+hbs.registerPartials(__dirname + '/views/partials');
 app.set('view engine', 'hbs');
 app.use('/assets', express.static(__dirname + '/public'));
 
